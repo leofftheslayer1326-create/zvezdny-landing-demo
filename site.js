@@ -5,7 +5,7 @@
 
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const THEME_KEY = 'theme';
-const DEMO_RAW_ROOT = 'https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526e/';
+const DEMO_RAW_ROOT = 'https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/';
 
 function readTheme() {
   try { return localStorage.getItem(THEME_KEY); }
@@ -235,4 +235,8 @@ function initGallery() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', boot);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot);
+} else {
+  boot();
+}
