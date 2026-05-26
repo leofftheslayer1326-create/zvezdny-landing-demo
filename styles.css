@@ -186,8 +186,13 @@ h1,h2,h3,h4,h5{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:400;let
 .editorial-btn:hover{transform:translateY(-1px)}
 .editorial-btn--light{background:#f7f3ea;color:#171714;border-color:#f7f3ea}
 .editorial-btn--light:hover{background:#fff;border-color:#fff}
-.editorial-btn--ghost{color:#f7f3ea;background:rgba(0,0,0,.16)}
-.editorial-btn--ghost:hover{background:rgba(245,241,232,.12);border-color:#f7f3ea}
+.editorial-btn--ghost{
+  color:#fff!important;
+  background:rgba(0,0,0,.42);
+  border-color:rgba(255,255,255,.78);
+  text-shadow:0 1px 10px rgba(0,0,0,.72);
+}
+.editorial-btn--ghost:hover{background:rgba(255,255,255,.16);border-color:#fff;color:#fff!important}
 
 .hero__scroll{
   position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
@@ -209,9 +214,16 @@ h1,h2,h3,h4,h5{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:400;let
 
 /* facts list */
 .facts{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
-.facts>div{display:grid;grid-template-columns:1fr auto;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.facts dt{margin:0;font-size:13px;color:var(--muted);letter-spacing:.04em}
-.facts dd{margin:0;font-family:'Fraunces',serif;font-size:28px;color:var(--ink);font-weight:400;letter-spacing:0}
+.facts>div{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding:24px 0;border-bottom:1px solid var(--line);
+}
+.facts dt{margin:0;font-size:14px;color:var(--muted);letter-spacing:.02em;line-height:1.35}
+.facts dd{
+  margin:0;font-family:'Inter',sans-serif;font-size:clamp(17px,1.25vw,20px);
+  color:var(--ink);font-weight:600;letter-spacing:0;line-height:1.25;
+  text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;
+}
 
 /* ============ CASTLE ============ */
 .castle{position:relative;background:var(--night);color:var(--night-text);padding:0;overflow:hidden}
@@ -373,13 +385,13 @@ h1,h2,h3,h4,h5{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:400;let
   background-position:center;background-size:cover;
 }
 .bento__cell:before{
-  content:"";position:absolute;inset:0 0 138px;z-index:0;
+  content:"";position:absolute;inset:0 0 156px;z-index:0;
   background-image:inherit;background-position:inherit;background-size:inherit;
   filter:grayscale(.32) contrast(1.04) brightness(.94);
   transition:transform 1.2s var(--ease),filter .6s;
 }
 .bento__cell:after{
-  content:"";position:absolute;inset:0 0 138px;z-index:1;
+  content:"";position:absolute;inset:0 0 156px;z-index:1;
   background:
     linear-gradient(180deg,rgba(0,0,0,.08),transparent 46%,rgba(0,0,0,.18)),
     linear-gradient(90deg,rgba(0,0,0,.16),transparent 54%);
@@ -389,26 +401,27 @@ h1,h2,h3,h4,h5{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:400;let
 .bento__cell > *{position:relative;z-index:2}
 /* spotlight по курсору */
 .bento__spot{
-  position:absolute;inset:0 0 138px;z-index:1;opacity:0;transition:opacity .35s var(--ease);pointer-events:none;
+  position:absolute;inset:0 0 156px;z-index:1;opacity:0;transition:opacity .35s var(--ease);pointer-events:none;
   background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),rgba(255,253,247,.24),transparent 62%);
 }
 
 .bento__body{
-  position:relative;z-index:2;width:100%;margin-top:auto;
-  min-height:138px;padding:22px 24px 24px;
+  position:absolute;left:0;right:0;bottom:0;z-index:4;width:auto;margin:0;
+  min-height:156px;padding:24px 26px 26px;
   display:flex;flex-direction:column;justify-content:flex-end;
-  background:rgba(255,253,247,.97);
-  border-top:1px solid rgba(49,82,70,.18);
+  background:#fffdf7;
+  border-top:1px solid rgba(49,82,70,.22);
+  box-shadow:0 -18px 32px rgba(0,0,0,.18);
 }
 .bento__kicker{
   font:600 11px/1 'Inter',sans-serif;letter-spacing:.2em;text-transform:uppercase;
   color:var(--accent);margin:0 0 14px;align-self:flex-start;
   padding:0;border-bottom:0;
 }
-.bento__title{font:400 30px/1.08 'Fraunces',serif;letter-spacing:0;font-variation-settings:"opsz" 144,"SOFT" 0;margin:0 0 10px;color:var(--ink)}
-.bento__title small{display:block;font:600 11px/1.35 'Inter',sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-top:8px}
-.bento__price{font:400 18px/1 'Fraunces',serif;color:var(--ink)}
-.bento__price small{font:500 12px/1 'Inter',sans-serif;letter-spacing:.04em;text-transform:none;color:var(--muted)}
+.bento__title{font:400 30px/1.08 'Fraunces',serif;letter-spacing:0;font-variation-settings:"opsz" 144,"SOFT" 0;margin:0 0 10px;color:#171714}
+.bento__title small{display:block;font:700 11px/1.35 'Inter',sans-serif;color:#59564d;text-transform:uppercase;letter-spacing:.14em;margin-top:8px}
+.bento__price{font:400 18px/1 'Fraunces',serif;color:#171714}
+.bento__price small{font:500 12px/1 'Inter',sans-serif;letter-spacing:.04em;text-transform:none;color:#59564d}
 
 /* раскладка: 3 номера + 3 атмосферных ячейки */
 .bento__cell--xl{grid-column:span 4;grid-row:span 2}
@@ -485,7 +498,11 @@ body.theme-dark .page-section--cream{background:var(--paper-2)}
 body.theme-dark .page-section--dark{background:#06050a}
 body.theme-dark .castle,
 body.theme-dark .book{background:#06050a;color:var(--night-text)}
-body.theme-dark .bento__body{background:rgba(29,32,27,.97);border-color:rgba(157,199,173,.22)}
+body.theme-dark .bento__body{background:#1d201b;border-color:rgba(157,199,173,.28);box-shadow:0 -18px 32px rgba(0,0,0,.42)}
+body.theme-dark .bento__title,
+body.theme-dark .bento__price{color:#f7f3ea}
+body.theme-dark .bento__title small,
+body.theme-dark .bento__price small{color:#d8d0c0}
 body.theme-dark .btn--inverted{background:#f7f3ea;color:#171714}
 
 /* ============ INNER PAGES — общие ============ */
@@ -648,7 +665,7 @@ body.theme-dark .btn--inverted{background:#f7f3ea;color:#171714}
   .bento{grid-template-columns:1fr;grid-auto-rows:auto;padding:0 20px;gap:14px}
   .bento__cell--xl,.bento__cell--lg,.bento__cell--md,.bento__cell--sm{grid-column:span 1;grid-row:span 1}
   .bento__cell{min-height:326px}
-  .bento__body{min-height:138px;padding:20px}
+  .bento__body{min-height:150px;padding:20px}
   .bento__title{font-size:26px}
   .castle__figure{height:60vh;min-height:380px}
   .table__photo{min-height:320px}
