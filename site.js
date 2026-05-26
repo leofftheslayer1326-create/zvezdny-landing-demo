@@ -4,6 +4,30 @@
    ============================================================ */
 
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const THEME_KEY = 'theme';
+
+function readTheme() {
+  try { return localStorage.getItem(THEME_KEY); }
+  catch { return null; }
+}
+
+function writeTheme(theme) {
+  try { localStorage.setItem(THEME_KEY, theme); }
+  catch { /* ignore */ }
+}
+
+function applyTheme(theme) {
+  const isDark = theme === 'dark';
+  document.body.classList.toggle('theme-dark', isDark);
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.textContent = isDark ? '☼' : '☾';
+  btn.setAttribute('aria-pressed', String(isDark));
+  btn.setAttribute('aria-label', isDark ? 'Включить дневную тему' : 'Включить ночную тему');
+  btn.title = isDark ? 'Дневная тема' : 'Ночная тема';
+}
+
+applyTheme(readTheme() === 'dark' ? 'dark' : 'light');
 
 /* -------- Подгрузка partials -------- */
 async function injectPartial(slot, url) {
@@ -42,11 +66,11 @@ async function boot() {
 /* -------- THEME (light/dark) -------- */
 function initTheme() {
   const btn = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('theme');
-  if (saved === 'dark') document.body.classList.add('theme-dark');
+  applyTheme(document.body.classList.contains('theme-dark') ? 'dark' : 'light');
   if (btn) btn.addEventListener('click', () => {
-    document.body.classList.toggle('theme-dark');
-    localStorage.setItem('theme', document.body.classList.contains('theme-dark') ? 'dark' : 'light');
+    const next = document.body.classList.contains('theme-dark') ? 'light' : 'dark';
+    applyTheme(next);
+    writeTheme(next);
   });
 }
 
