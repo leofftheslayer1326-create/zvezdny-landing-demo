@@ -5,7 +5,7 @@
 
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const THEME_KEY = 'theme';
-const DEMO_RAW_ROOT = 'https://raw.githubusercontent.com/leofftheslayer1326-create/zvezdny-landing-demo/main/';
+const DEMO_RAW_ROOT = 'https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526e/';
 
 function readTheme() {
   try { return localStorage.getItem(THEME_KEY); }
