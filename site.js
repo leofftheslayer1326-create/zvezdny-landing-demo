@@ -61,6 +61,60 @@ async function boot() {
   initGallery();
   initTheme();
   initBentoSpotlight();
+  initPreviewNavigation();
+}
+
+/* -------- HTMLPreview navigation -------- */
+function initPreviewNavigation() {
+  if (window.location.hostname !== 'htmlpreview.github.io') return;
+
+  const repoBase = 'https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/';
+
+  function normalizeInternalPath(href) {
+    if (!href || href === '#') return null;
+    if (/^(tel:|mailto:|javascript:)/i.test(href)) return null;
+
+    const [rawPath, rawHash = ''] = href.split('#');
+    let path = rawPath.trim();
+    const hash = rawHash ? `#${rawHash}` : '';
+
+    if (/^https?:/i.test(path)) {
+      try {
+        const url = new URL(path);
+        const parts = url.pathname.split('/').filter(Boolean);
+
+        if (url.hostname === 'raw.githubusercontent.com') {
+          const mainIndex = parts.indexOf('main');
+          if (mainIndex === -1) return null;
+          path = parts.slice(mainIndex + 1).join('/');
+        } else if (url.hostname.endsWith('githack.com')) {
+          path = parts.slice(3).join('/');
+        } else {
+          return null;
+        }
+      } catch {
+        return null;
+      }
+    }
+
+    if (!path || path === './' || path === '/') path = 'index.html';
+    path = path.replace(/^\.\//, '').replace(/^\//, '');
+    if (path.endsWith('/')) path += 'index.html';
+    if (!path.endsWith('.html')) return null;
+
+    return `${path}${hash}`;
+  }
+
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+
+    const path = normalizeInternalPath(link.getAttribute('href'));
+    if (!path) return;
+
+    event.preventDefault();
+    window.location.href = repoBase + path;
+  });
 }
 
 /* -------- THEME (light/dark) -------- */
