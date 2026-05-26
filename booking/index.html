@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<base href="/zvezdny-landing-demo/" />
+<title>Бронирование — Пансионат «Звёздный»</title>
+<meta name="description" content="Прейскурант 2026, форма онлайн-бронирования, правила проживания." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="booking">
+
+<div id="site-header"></div>
+
+<main class="page">
+
+<section class="page-section" style="padding-top:140px">
+  <div class="wrap">
+    <div class="crumb" style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:18px">
+      <a href="./">Звёздный</a> &nbsp;/&nbsp; Бронирование
+    </div>
+    <div class="kicker">Бронирование</div>
+    <h1 class="display" style="max-width:22ch">Позвоните или оставьте<br/>заявку — перезвоним.</h1>
+
+    <div class="book__inner" style="margin-top:64px">
+      <div class="book__col">
+        <p class="lead">Лучшая цена — при прямом бронировании. Без посредников и&nbsp;комиссий.</p>
+        <a href="tel:88006004778" class="book__phone" style="color:var(--ink)">8 (800) 600-47-78</a>
+        <a href="tel:+79064897181" class="book__phone book__phone--small" style="color:var(--muted)">+7 906 489-71-81</a>
+        <div class="book__meta">
+          <a href="mailto:zzpan@mail.ru" style="color:var(--ink-soft);border-color:var(--line)">zzpan@mail.ru</a>
+          <a href="https://wa.me/79064897181" target="_blank" style="color:var(--ink-soft);border-color:var(--line)">WhatsApp</a>
+          <a href="https://t.me/+79064897181" target="_blank" style="color:var(--ink-soft);border-color:var(--line)">Telegram</a>
+        </div>
+        <div style="margin-top:32px;padding-top:32px;border-top:1px solid var(--line)">
+          <h3 style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 14px">Время работы</h3>
+          <p style="margin:0;font-size:15px;color:var(--ink-soft);line-height:1.7">Стойка регистрации — 08:00 — 22:00 (заселение с&nbsp;14:00)<br/>Кафе — 10:00 — 19:00<br/>Аварийный звонок — круглосуточно</p>
+        </div>
+      </div>
+
+      <form id="bookForm" class="book__form" style="background:var(--paper-2)">
+        <h3 style="font-family:'Fraunces',serif;font-size:26px;font-weight:400;margin:0 0 12px">Оставьте заявку</h3>
+        <p style="font-size:13px;color:var(--muted);margin:0 0 24px;text-transform:none;letter-spacing:0;font-weight:400">Перезвоним в течение 15&nbsp;минут в рабочее время.</p>
+        <label>Имя
+          <input type="text" name="name" required placeholder="Как к вам обращаться" />
+        </label>
+        <div class="book__row">
+          <label>Заезд<input type="date" name="check_in" required /></label>
+          <label>Выезд<input type="date" name="check_out" required /></label>
+        </div>
+        <label>Телефон<input type="tel" name="phone" required placeholder="+7" /></label>
+        <label>E-mail (необязательно)<input type="email" name="email" placeholder="you@example.com" /></label>
+        <label>Категория
+          <select name="category">
+            <option>Стандарт — от 6 400 ₽</option>
+            <option selected>Джуниор-Сюит — от 10 200 ₽</option>
+            <option>Апартаменты — от 13 200 ₽</option>
+          </select>
+        </label>
+        <label>Комментарий
+          <input type="text" name="note" placeholder="Доп. место, ребёнок, особые пожелания" />
+        </label>
+        <button class="btn btn--solid btn--block" type="submit">Отправить заявку</button>
+        <p class="book__note">Нажимая кнопку, вы соглашаетесь с&nbsp;обработкой персональных данных.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="price" class="page-section page-section--cream">
+  <div class="wrap">
+    <div class="kicker">Прейскурант 2026</div>
+    <h2 class="display" style="max-width:24ch">Цены на&nbsp;проживание.<br/>Двухместное размещение.</h2>
+
+    <div class="price-table">
+      <div class="price-row price-row--head">
+        <div>Категория</div>
+        <div>Низкий сезон<br/>(нояб — март)</div>
+        <div>Стандарт<br/>(апр — июнь, сент — окт)</div>
+        <div>Высокий сезон<br/>(июль — август)</div>
+      </div>
+      <div class="price-row">
+        <div class="price-row__name">Стандарт<small>18,5 м², до трёх гостей</small></div>
+        <div class="price-row__cell">6 400 ₽<small>в сутки</small></div>
+        <div class="price-row__cell">7 800 ₽<small>в сутки</small></div>
+        <div class="price-row__cell">9 200 ₽<small>в сутки</small></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row__name">Джуниор-Сюит<small>37 м², до 4 чел.</small></div>
+        <div class="price-row__cell">10 200 ₽<small>в сутки</small></div>
+        <div class="price-row__cell">12 400 ₽<small>в сутки</small></div>
+        <div class="price-row__cell">14 800 ₽<small>в сутки</small></div>
+      </div>
+      <div class="price-row">
+        <div class="price-row__name">Апартаменты<small>67,5 м², до 4 чел.</small></div>
+        <div class="price-row__cell">13 200 ₽<small>в сутки</small></div>
+        <div class="price-row__cell">15 600 ₽<small>в сутки</small></div>
+        <div class="price-row__cell">18 400 ₽<small>в сутки</small></div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px">
+      <div>
+        <h4 style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 8px">Питание</h4>
+        <p style="margin:0;font-size:15px;color:var(--ink-soft)">Завтрак включён. Обед — 850&nbsp;₽, ужин — 950&nbsp;₽ по&nbsp;запросу.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 8px">Дети</h4>
+        <p style="margin:0;font-size:15px;color:var(--ink-soft)">До&nbsp;5&nbsp;лет — бесплатно без&nbsp;доп. места. С&nbsp;6&nbsp;лет — доп. место 1&nbsp;800&nbsp;₽/сутки.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 8px">Длительное проживание</h4>
+        <p style="margin:0;font-size:15px;color:var(--ink-soft)">От&nbsp;14&nbsp;ночей — скидка 10%. От&nbsp;30&nbsp;ночей — обсуждается отдельно.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rules" class="page-section">
+  <div class="wrap">
+    <div class="kicker">Правила проживания</div>
+    <h2 class="display" style="max-width:22ch">Коротко — что важно<br/>знать заранее.</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:48px">
+      <div>
+        <h3 style="font-family:'Fraunces',serif;font-size:22px;font-weight:400;margin:0 0 14px">Заезд и выезд</h3>
+        <ul style="display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--ink-soft)">
+          <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--line-2)"></span>Заезд — с&nbsp;14:00, выезд — до&nbsp;12:00</li>
+          <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--line-2)"></span>Гарантия номера — 12&nbsp;часов после ожидаемого заезда</li>
+          <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--line-2)"></span>Поздний выезд — по&nbsp;возможности, по&nbsp;согласованию</li>
+          <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--line-2)"></span>Документ — паспорт РФ или иностранный с&nbsp;миграционной картой</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-family:'Fraunces',serif;font-size:22px;font-weight:400;margin:0 0 14px">Что нельзя</h3>
+        <ul style="display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--ink-soft)">
+          <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--line-2)"></span>Курение в&nbsp;номерах и&nbsp;общественных зонах</li>
+          <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--line-2)"></span>Размещение с&nbsp;животными</li>
+          <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--line-2)"></span>Громкая музыка после 23:00</li>
+          <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--line-2)"></span>Приготовление пищи в&nbsp;номерах без&nbsp;кухни</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="policy" class="page-section page-section--cream">
+  <div class="wrap" style="max-width:880px">
+    <div class="kicker">Условия отмены</div>
+    <h2 class="display" style="font-size:36px;max-width:24ch">Бесплатная отмена за&nbsp;7&nbsp;дней до&nbsp;заезда.</h2>
+    <p class="lead" style="margin-top:20px">
+      Если планы изменились — отмена без штрафа возможна не&nbsp;позднее, чем за&nbsp;7&nbsp;суток до&nbsp;даты
+      заезда. За&nbsp;3–7 суток — удерживается стоимость первой ночи. Менее 3&nbsp;суток
+      или при&nbsp;«no-show» — удерживается полная стоимость бронирования.
+    </p>
+    <p style="margin-top:18px;color:var(--ink-soft);font-size:16px;line-height:1.65">
+      Возврат средств — на&nbsp;карту, с&nbsp;которой произведена оплата, в&nbsp;течение
+      3–10 банковских дней. Для уточнения — звоните на&nbsp;8&nbsp;(800)&nbsp;600-47-78.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="site.js"></script>
+</body>
+</html>
