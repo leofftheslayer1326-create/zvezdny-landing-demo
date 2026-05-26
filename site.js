@@ -5,6 +5,7 @@
 
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const THEME_KEY = 'theme';
+const DEMO_RAW_ROOT = 'https://raw.githubusercontent.com/leofftheslayer1326-create/zvezdny-landing-demo/main/';
 
 function readTheme() {
   try { return localStorage.getItem(THEME_KEY); }
@@ -34,7 +35,8 @@ async function injectPartial(slot, url) {
   const el = document.getElementById(slot);
   if (!el) return;
   try {
-    const r = await fetch(url, { cache: 'no-cache' });
+    const src = window.location.hostname === 'htmlpreview.github.io' ? DEMO_RAW_ROOT + url : url;
+    const r = await fetch(src, { cache: 'no-cache' });
     if (!r.ok) return;
     el.outerHTML = await r.text();
   } catch (e) { /* ignore */ }
