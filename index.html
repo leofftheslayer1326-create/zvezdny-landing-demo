@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<base href="/zvezdny-landing-demo/" />
+<title>Звёздный — Кисловодск</title>
+<meta name="description" content="Камерный пансионат у замка Мухтарова 1893 года. Кисловодск, ул. Урицкого 4." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+
+<div id="site-header"></div>
+
+<main id="top">
+
+<!-- HERO — full-bleed photo, журнальный лэйаут -->
+<section class="hero">
+  <div class="hero__photo" id="heroPhoto"></div>
+  <div class="hero__grain"></div>
+  <div class="hero__vignette"></div>
+
+  <div class="hero__inner">
+    <div class="hero__content">
+      <div class="hero__meta">
+        <span>Est. 1975</span>
+        <span class="hero__dot"></span>
+        <span>Замок 1893</span>
+        <span class="hero__dot"></span>
+        <span>Кисловодск</span>
+      </div>
+      <h1 class="hero__title">Камерный пансионат<br/>у&nbsp;замка Мухтарова</h1>
+      <p class="hero__sub">Двадцать семь номеров на закрытой территории в центре города-курорта. Между Курортным парком, Нарзанной галереей и собственной кухней.</p>
+      <div class="hero__cta">
+        <a href="booking/" class="editorial-btn editorial-btn--light">Забронировать</a>
+        <a href="rooms/" class="editorial-btn editorial-btn--ghost">Номера и тарифы</a>
+      </div>
+    </div>
+
+    <aside class="hero__ledger" aria-label="Коротко о пансионате">
+      <div>
+        <span>Адрес</span>
+        <strong>Урицкого, 4</strong>
+      </div>
+      <div>
+        <span>До парка</span>
+        <strong>15 минут</strong>
+      </div>
+      <div>
+        <span>Формат</span>
+        <strong>27 номеров</strong>
+      </div>
+    </aside>
+  </div>
+
+  <div class="hero__scroll">
+    <span>Прокрутите</span>
+    <i></i>
+  </div>
+</section>
+
+<!-- PROOF STRIP — спокойная газетная полоса с фактами -->
+<section class="proofstrip" aria-label="Факты о пансионате">
+  <div class="proofstrip__inner">
+    <div><span>1975</span><p>пансионат принимает гостей</p></div>
+    <div><span>1893</span><p>год постройки замка Мухтарова</p></div>
+    <div><span>три звезды</span><p>категория гостиничного комплекса</p></div>
+    <div><span>2022</span><p>финалист National Hotel Award</p></div>
+  </div>
+</section>
+
+<!-- CHAPTER -->
+<section id="chapter" class="chapter">
+  <div class="wrap">
+    <div class="chapter__head">
+      <div class="kicker">01 — Пансионат</div>
+      <h2 class="display">Тишина в ста шагах<br/>от нарзанной галереи.</h2>
+    </div>
+    <div class="chapter__grid">
+      <div class="chapter__col">
+        <p class="lead">
+          «Звёздный» — гостиничный комплекс из двадцати семи номеров на собственной
+          закрытой территории. С террас открывается вид на замок Мухтарова и горы;
+          до Нарзанной галереи и входа в Курортный парк — пятнадцать минут пешком.
+        </p>
+        <p>
+          В 2020 году комплексу присвоена категория «три звезды». В 2022 — финалист
+          National Hotel Award. Гости отмечают камерность, авторскую кухню
+          и&nbsp;внимание к&nbsp;деталям.
+        </p>
+      </div>
+      <div class="chapter__col chapter__col--facts">
+        <dl class="facts">
+          <div><dt>Год основания пансионата</dt><dd>1975</dd></div>
+          <div><dt>Номеров на территории</dt><dd>27</dd></div>
+          <div><dt>До Курортного парка</dt><dd>15 мин пешком</dd></div>
+          <div><dt>Категория</dt><dd>три звезды</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASTLE — большая фото-полоса -->
+<section id="castle" class="castle">
+  <figure class="castle__figure">
+    <div class="castle__img" data-parallax="0.18"></div>
+    <figcaption class="castle__cap">Замок Мухтарова. Эммануил Ходжаев, 1893. Объект культурного наследия.</figcaption>
+  </figure>
+  <div class="wrap castle__text">
+    <div class="kicker">02 — Памятник</div>
+    <h2 class="display">Здание, которому<br/>сто тридцать два года.</h2>
+    <p class="lead">
+      Построен в 1893 году по заказу нефтепромышленника Муртузы Мухтарова.
+      Архитектор — Эммануил Ходжаев. Асимметричная композиция, сочетание модерна
+      и восточных мотивов. До революции в стенах замка устраивали балы;
+      с 1975 года он принадлежит пансионату.
+    </p>
+  </div>
+</section>
+
+<!-- ROOMS — bento-grid (Palace-style) -->
+<section id="rooms" class="rooms">
+  <div class="wrap rooms__head">
+    <div class="kicker">03 — Размещение</div>
+    <h2 class="display">Три категории.<br/>Двадцать семь номеров.</h2>
+  </div>
+
+  <div class="bento">
+    <a class="bento__cell bento__cell--xl" href="rooms/junior-suite.html" style="background-image:url('data/uploads/hero-castle.jpg')">
+      <span class="bento__spot"></span>
+      <span class="bento__kicker">Выбор гостей</span>
+      <h3 class="bento__title">Джуниор-Сюит<small>двухкомнатный · 37 м² · два балкона</small></h3>
+      <div class="bento__price">от 10 200 ₽ <small>/ сутки</small></div>
+    </a>
+    <a class="bento__cell bento__cell--md" href="rooms/standart.html" style="background-image:url('data/uploads/room-3.jpg')">
+      <span class="bento__spot"></span>
+      <h3 class="bento__title">Стандарт<small>18,5 м² · до 3 чел.</small></h3>
+      <div class="bento__price">от 6 400 ₽</div>
+    </a>
+    <a class="bento__cell bento__cell--sm" href="rooms/apartments.html" style="background-image:url('data/uploads/castle-side.jpg')">
+      <span class="bento__spot"></span>
+      <h3 class="bento__title">Апартаменты<small>67,5 м² · с кухней</small></h3>
+      <div class="bento__price">от 13 200 ₽</div>
+    </a>
+    <a class="bento__cell bento__cell--md" href="services/" style="background-image:url('data/uploads/territory.jpg')">
+      <span class="bento__spot"></span>
+      <span class="bento__kicker">Стол</span>
+      <h3 class="bento__title">Кафе «Летняя веранда»<small>кавказская и европейская кухня</small></h3>
+    </a>
+    <a class="bento__cell bento__cell--md" href="castle/" style="background-image:url('data/uploads/castle-outside.jpg')">
+      <span class="bento__spot"></span>
+      <span class="bento__kicker">1893</span>
+      <h3 class="bento__title">Замок Мухтарова<small>объект культурного наследия</small></h3>
+    </a>
+    <a class="bento__cell bento__cell--md" href="booking/" style="background-image:url('data/uploads/territory.jpg')">
+      <span class="bento__spot"></span>
+      <span class="bento__kicker">Бронирование</span>
+      <h3 class="bento__title">Прямая бронь<small>без посредников и комиссий</small></h3>
+    </a>
+  </div>
+</section>
+
+<!-- TABLE — кухня, отдельная полоса -->
+<section id="table" class="table">
+  <div class="table__split">
+    <div class="table__photo" style="background-image:url('data/uploads/territory.jpg')"></div>
+    <div class="table__text">
+      <div class="kicker">04 — Стол</div>
+      <h2 class="display">Кухня кавказская<br/>и европейская.</h2>
+      <p class="lead">
+        Завтрак — шведский стол. Обед и ужин — по меню. Кафе «Летняя веранда»
+        с видом на замок. По запросу — корзина для пикника к Медовым водопадам
+        или на верхние терренкуры парка.
+      </p>
+      <ul class="table__list">
+        <li><span>10:00 – 19:00</span> Кафе «Летняя веранда»</li>
+        <li><span>с 14:00</span> Заселение</li>
+        <li><span>Шведский</span> Завтраки</li>
+        <li><span>По меню</span> Обеды и ужины</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES — простой список -->
+<section class="services">
+  <div class="wrap">
+    <div class="kicker">05 — Что включено</div>
+    <h2 class="display services__h">Никаких лишних опций.<br/>Только то, чем вы воспользуетесь.</h2>
+    <div class="services__cols">
+      <div>
+        <h4>Дома</h4>
+        <ul>
+          <li>Wi-Fi на всей территории</li>
+          <li>Охраняемая парковка</li>
+          <li>Стирка</li>
+          <li>Косметика и тапочки в номере</li>
+        </ul>
+      </div>
+      <div>
+        <h4>За дверью</h4>
+        <ul>
+          <li>Трансфер из аэропорта и с вокзала</li>
+          <li>Скандинавская ходьба по терренкурам</li>
+          <li>Экскурсии: Эльбрус, Чегем, Домбай, Архыз</li>
+          <li>Корзина для пикника</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Здоровье</h4>
+        <ul>
+          <li>Аэросолярий</li>
+          <li>Лечение в «Виктории» и «Долине Нарзанов»</li>
+          <li>Программа nordic walking</li>
+          <li>Прокат инвентаря</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLACE -->
+<section id="place" class="place">
+  <div class="wrap place__head">
+    <div class="kicker">06 — Где мы</div>
+    <h2 class="display">Урицкого, 4.<br/>Центр Кисловодска.</h2>
+  </div>
+  <div class="place__split">
+    <ul class="place__dist">
+      <li><span>20 м</span> Аквапарк</li>
+      <li><span>30 м</span> Лечебный корпус «Долина Нарзанов»</li>
+      <li><span>15 мин</span> Нарзанная галерея и вход в Курортный парк</li>
+      <li><span>1,5 км</span> Железнодорожный вокзал</li>
+      <li><span>50 км</span> Аэропорт Минеральные Воды</li>
+    </ul>
+    <div class="place__map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?ll=42.722%2C43.905&z=15&pt=42.722,43.905,pm2rdm"
+        loading="lazy" title="Пансионат Звёздный на карте"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section id="book" class="book bg-flow">
+  <div class="wrap book__inner">
+    <div class="book__col">
+      <div class="kicker">07 — Бронирование</div>
+      <h2 class="display book__h">Позвоните или оставьте<br/>заявку — перезвоним.</h2>
+      <p class="lead">Лучшая цена — при прямом бронировании. Без посредников и комиссий.</p>
+      <a href="tel:88006004778" class="book__phone">8 (800) 600-47-78</a>
+      <a href="tel:+79064897181" class="book__phone book__phone--small">+7 906 489-71-81</a>
+      <div class="book__meta">
+        <a href="mailto:zzpan@mail.ru">zzpan@mail.ru</a>
+        <a href="https://wa.me/79064897181" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://t.me/+79064897181" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+
+    <form id="bookForm" class="book__form" onsubmit="return false;">
+      <label>Имя
+        <input type="text" name="name" required placeholder="Как к вам обращаться" />
+      </label>
+      <div class="book__row">
+        <label>Заезд<input type="date" name="check_in" required /></label>
+        <label>Выезд<input type="date" name="check_out" required /></label>
+      </div>
+      <label>Телефон<input type="tel" name="phone" required placeholder="+7" /></label>
+      <label>Категория
+        <select name="category">
+          <option>Стандарт — от 6 400 ₽</option>
+          <option selected>Джуниор-Сюит — от 10 200 ₽</option>
+          <option>Апартаменты — от 13 200 ₽</option>
+        </select>
+      </label>
+      <button class="btn btn--solid btn--block" type="submit">Отправить заявку</button>
+      <p class="book__note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="site.js"></script>
+</body>
+</html>
