@@ -3,17 +3,38 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<base href="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/" />
+<base href="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/" />
 <title>Стандарт — Пансионат «Звёздный»</title>
 <meta name="description" content="Однокомнатный номер с балконом, 18,5 м². От 6 400 ₽ в сутки." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/styles.css?v=20260526f" />
+<link rel="stylesheet" href="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/styles.css?v=20260526g" />
 </head>
 <body data-page="rooms">
 
-<div id="site-header"></div>
+<header class="topbar">
+  <div class="prototype-banner">
+    Прототип сайта. Тексты, цены, условия проживания и юридические формулировки показаны для согласования.
+  </div>
+  <div class="topbar__inner">
+    <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/index.html" class="logo">
+      <span class="logo__name">Звёздный</span>
+    </a>
+    <nav class="topnav" id="topnav">
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/about/index.html" data-page="about">Пансионат</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/castle/index.html" data-page="castle">Замок</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/rooms/index.html" data-page="rooms">Номера</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/services/index.html" data-page="services">Услуги</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/journal/index.html" data-page="journal">Журнал</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/booking/index.html" data-page="booking">Бронь</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/contacts/index.html" data-page="contacts">Контакты</a>
+    </nav>
+    <a href="tel:88006004778" class="topcall">8 (800) 600-47-78</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему" aria-pressed="false" title="Тема">☾</button>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span></button>
+  </div>
+</header>
 
 <main class="page">
 
@@ -34,13 +55,13 @@
     </div>
 
     <div class="gal">
-      <div class="gal__main"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/room-3.jpg" alt="Стандарт" /></div>
+      <div class="gal__main"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/room-3.jpg" alt="Стандарт" /></div>
       <div class="gal__row">
-        <button class="gal__thumb is-active" data-full="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/room-3.jpg"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/room-3.jpg" alt="" /></button>
-        <button class="gal__thumb" data-full="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/hero-castle.jpg"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/hero-castle.jpg" alt="" /></button>
-        <button class="gal__thumb" data-full="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/castle-side.jpg"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/castle-side.jpg" alt="" /></button>
-        <button class="gal__thumb" data-full="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/territory.jpg"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/territory.jpg" alt="" /></button>
-        <button class="gal__thumb" data-full="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/castle-outside.jpg"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/castle-outside.jpg" alt="" /></button>
+        <button class="gal__thumb is-active" data-full="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/room-3.jpg"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/room-3.jpg" alt="" /></button>
+        <button class="gal__thumb" data-full="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/hero-castle.jpg"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/hero-castle.jpg" alt="" /></button>
+        <button class="gal__thumb" data-full="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/castle-side.jpg"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/castle-side.jpg" alt="" /></button>
+        <button class="gal__thumb" data-full="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/territory.jpg"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/territory.jpg" alt="" /></button>
+        <button class="gal__thumb" data-full="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/castle-outside.jpg"><img src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/castle-outside.jpg" alt="" /></button>
       </div>
     </div>
 
@@ -102,7 +123,7 @@
     <div class="rooms__grid">
       <article class="card">
         <a class="card__media" href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/rooms/junior-suite.html">
-          <div class="card__img" style="background-image:url('https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/hero-castle.jpg')"></div>
+          <div class="card__img" style="background-image:url('https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/hero-castle.jpg')"></div>
         </a>
         <div class="card__body">
           <div class="card__row"><h3>Джуниор-Сюит</h3><span class="card__price">от 10 200 ₽<small>/ сутки</small></span></div>
@@ -111,7 +132,7 @@
       </article>
       <article class="card">
         <a class="card__media" href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/rooms/apartments.html">
-          <div class="card__img" style="background-image:url('https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/data/uploads/castle-side.jpg')"></div>
+          <div class="card__img" style="background-image:url('https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/data/uploads/castle-side.jpg')"></div>
         </a>
         <div class="card__body">
           <div class="card__row"><h3>Апартаменты</h3><span class="card__price">от 13 200 ₽<small>/ сутки</small></span></div>
@@ -124,7 +145,36 @@
 
 </main>
 
-<div id="site-footer"></div>
-<script src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526f/site.js?v=20260526f"></script>
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <span class="logo__name">Звёздный</span>
+      <p>Категория «Три звезды».<br/>Кисловодск, ул. Урицкого 4.<br/>© 1975 — 2026.</p>
+    </div>
+    <div class="foot__col">
+      <h5>Сайт</h5>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/about/index.html">Пансионат</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/castle/index.html">Замок 1893</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/rooms/index.html">Номера и тарифы</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/services/index.html">Услуги</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/journal/index.html">Журнал</a>
+    </div>
+    <div class="foot__col">
+      <h5>Связь</h5>
+      <a href="tel:88006004778">8 (800) 600-47-78</a>
+      <a href="tel:+79064897181">+7 906 489-71-81</a>
+      <a href="mailto:zzpan@mail.ru">zzpan@mail.ru</a>
+      <a href="https://t.me/+79064897181" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://wa.me/79064897181" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div class="foot__col">
+      <h5>Документы</h5>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/booking/index.html#price">Прейскурант 2026</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/booking/index.html#rules">Правила проживания</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/leofftheslayer1326-create/zvezdny-landing-demo/blob/main/booking/index.html#policy">Политика конф.</a>
+    </div>
+  </div>
+</footer>
+<script src="https://rawcdn.githack.com/leofftheslayer1326-create/zvezdny-landing-demo/zvezdny-demo-20260526g/site.js?v=20260526g"></script>
 </body>
 </html>

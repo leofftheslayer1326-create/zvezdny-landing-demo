@@ -740,6 +740,29 @@ body.theme-dark .btn--inverted{background:#f7f3ea;color:#171714}
   .crumb{line-height:1.6}
 }
 
+@media (max-width:1000px){
+  .topbar__inner{flex-wrap:wrap}
+  .topnav{
+    display:flex!important;
+    position:static;
+    order:5;
+    width:100%;
+    flex-direction:row;
+    overflow-x:auto;
+    gap:18px;
+    margin-left:0;
+    padding:8px 0 0;
+    border:0;
+    background:transparent;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav.open{display:flex}
+  .topnav a{white-space:nowrap}
+  .burger{display:none!important}
+}
+
 @media (prefers-reduced-motion:reduce){
   *,*:before,*:after{animation:none!important;transition:none!important}
   .hero__photo,.castle__img,.card__img{transform:none!important}
